@@ -1,10 +1,19 @@
 body {
   background-image: url(../images/tic-tac-toe.png);
+  color: rgb(95, 119, 111);
+}
+h3,
+h4 {
+  color: rgb(85, 87, 86);
+}
+p {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.247);
+  padding: 5px 0;
 }
 .container {
   padding: 0 35px;
   height: 100%;
-  width: 900px;
+  max-width: 900px;
   border-right: 1px solid rgba(128, 128, 128, 0.247);
   border-left: 1px solid rgba(128, 128, 128, 0.247);
   background-color: white;
@@ -13,12 +22,36 @@ body {
   background-image: url(../images/NYTimes-banner.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 288px;
+  height: 250px;
   border-bottom: 8px double rgb(161, 161, 161);
 }
 #article {
-  margin-bottom: 70px;
-  line-height: 1;
-  background-color: rgba(211, 211, 211, 0.438);
-  padding: 10px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  border: 1px dotted rgba(211, 211, 211, 0.438);
+  padding: 15px;
+}
+a {
+  color: rgb(12, 143, 121);
+}
+#searchBtn {
+  background-color: rgb(12, 143, 121);
+  color: white;
+}
+#clearBtn {
+  background-color: rgb(143, 97, 12);
+  color: white;
+}
+@media screen and (max-width: 640px) {
+  .container {
+    width: 300px;
+  }
+  .header {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
 }

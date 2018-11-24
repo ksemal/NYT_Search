@@ -13,19 +13,14 @@
 
   <body>
     <div class="container">
-      <div class="row"><div class="col-md-12 header"></div></div>
+      <div class="row"><div class="col-sm-12 header"></div></div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-sm-12">
           <form>
-            <h2 class="border-bottom py-2 my-3 pl-2">Search Parametrs</h2>
+            <h3 class="border-bottom py-2 my-3 pl-2">Search Parametrs</h3>
             <div class="form-group">
               <label for="name">Search Term</label>
-              <input
-                type="search"
-                class="form-control"
-                id="searchTerm"
-                placeholder=""
-              />
+              <input type="search" class="form-control" id="searchTerm" />
             </div>
             <div class="form-group">
               <label for="email">Number of Records to Retrieve</label>
@@ -61,15 +56,13 @@
                 id="eYear"
               />
             </div>
-            <button id="searchBtn" type="submit" class="btn btn-secondary">
-              Search
-            </button>
-            <button id="clearBtn" type="button" class="btn btn-secondary">
+            <button id="searchBtn" type="submit" class="btn">Search</button>
+            <button id="clearBtn" type="button" class="btn">
               Clear Results
             </button>
           </form>
           <form>
-            <h2 class="border-bottom pl-2 py-2 my-3">Top articles</h2>
+            <h3 class="border-bottom pl-2 py-2 my-3">Top articles</h3>
             <div id="result"></div>
           </form>
         </div>

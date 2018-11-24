@@ -24,51 +24,50 @@ $("#searchBtn").on("click", function(event) {
   $.ajax({
     url: urlQuery,
     data: options,
-    type: "get",
-    method: "GET"
+    type: "get"
   }).then(function(response) {
-    console.log(response);
-
     var arr = response.response.docs;
 
     for (var i = 0; i <= number; i++) {
       if (arr[i].headline !== undefined) {
         var title = arr[i].headline.main;
         var titleDiv = $("<h4>").html(
-          "<span>" + (i + 1) + ". </span>Title: " + title
+          "<span>" + (i + 1) + ". </span><b>Title: </b>" + title
         );
       } else {
-        var titleDiv = $("<h2></h2>").text("Title: " + title);
+        var titleDiv = $("<h4></h4>").html("<b>Title: </b>" + title);
       }
 
       if (arr[i].byline !== undefined) {
         console.log(arr[i].byline);
         var author = arr[i].byline.original;
-        var authorDiv = $("<p>").text("Author: " + author);
+        var authorDiv = $("<p>").html("<b>Author: </b>" + author);
       } else {
-        var authorDiv = $("<p>").text("Author: " + author);
+        var authorDiv = $("<p>").html("<b>Author: </b>" + author);
       }
       var section = arr[i].section_name;
-      var sectionDiv = $("<p>").text("Section: " + section);
+      var sectionDiv = $("<p>").html("<b>Section: </b>" + section);
       var date = arr[i].pub_date;
-      var dateDiv = $("<p>").text("Date: " + date);
-      var link = arr[i].web_url;
+      var dateDiv = $("<p>").html("<b>Date: </b>" + date);
+      var link = arr[i].snippet;
       var linkDiv = $("<a>")
-        .text("Link: " + link)
+        .text(link)
         .attr("href", arr[i].web_url);
-
-      console.log(title);
-      console.log(author);
-      console.log(link);
-      console.log(section);
-      console.log(date);
+      var linkTitle = $("<span><b>Link: </b></span>");
       var article = $("<div>").attr("id", "article");
-      article.append(titleDiv, authorDiv, sectionDiv, dateDiv, linkDiv);
+      article.append(
+        titleDiv,
+        authorDiv,
+        sectionDiv,
+        dateDiv,
+        linkTitle,
+        linkDiv
+      );
       $("#result").append(article);
     }
   });
 });
 
-$("#clearBtn").on("click", function() {
+$("#searchBtn").on("click", function() {
   $("#result").empty();
 });
