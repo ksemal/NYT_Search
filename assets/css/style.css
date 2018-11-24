@@ -1,0 +1,24 @@
+body {
+  background-image: url(../images/tic-tac-toe.png);
+}
+.container {
+  padding: 0 35px;
+  height: 100%;
+  width: 900px;
+  border-right: 1px solid rgba(128, 128, 128, 0.247);
+  border-left: 1px solid rgba(128, 128, 128, 0.247);
+  background-color: white;
+}
+.header {
+  background-image: url(../images/NYTimes-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 288px;
+  border-bottom: 8px double rgb(161, 161, 161);
+}
+#article {
+  margin-bottom: 70px;
+  line-height: 1;
+  background-color: rgba(211, 211, 211, 0.438);
+  padding: 10px;
+}
