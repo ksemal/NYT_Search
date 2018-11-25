@@ -6,6 +6,9 @@ h3,
 h4 {
   color: rgb(85, 87, 86);
 }
+h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 p {
   border-bottom: 1px solid rgba(128, 128, 128, 0.247);
   padding: 5px 0;
